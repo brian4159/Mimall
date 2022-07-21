@@ -1,15 +1,11 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <div id="app">
-   
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-// eslint-disable-next-line prettier/prettier
-
-
-
 export default {
   name: "App",
 };
