@@ -6,8 +6,19 @@
 </template>
 
 <script>
+import storage from './storage/index.js'
 export default {
   name: "App",
+  data(){
+    return{
+
+    }
+  },
+  mounted(){
+    // storage.setItem('a',1)
+   
+    storage.clear('a')
+  }
 };
 </script>
 
