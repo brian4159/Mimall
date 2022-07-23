@@ -6,29 +6,30 @@
 </template>
 
 <script>
-import storage from './storage/index.js'
+
 export default {
   name: "App",
   data(){
     return{
-
+      res:{}
     }
   },
   mounted(){
-    // storage.setItem('a',1)
-   
-    storage.clear('a')
+    // this.axios.get("/mock/user/login.json").then((res) =>{
+    //   this.res = res;
+
+    //通过easy-mock平台实现mock
+    // this.axios.get("/mock/user/login.json").then((res) =>{
+    //   this.res = res;
+
+    //本地集成mockjs
+    // this.axios.get("/mock/user/login.json").then((res) =>{
+    // this.res = res;
+    // })
   }
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './assets/scss/reset.scss';
 </style>
