@@ -12,11 +12,30 @@
         <a href="javascript:;">登录</a>
         <a href="javascript:;">注册</a>
         <a href="javascript:;" class="my-cart"><span class="icon-cart "></span>购物车</a>
-        
       </div>
     </div>
-    
-      
+    </div>
+    <div class="nav-header">
+      <div class="container">
+        <div class="header-logo">
+          <a href=""></a>
+        </div>
+        <div class="header-menu">
+          <div class="item-menu">
+            <span>小米手机</span>
+            <div class="children"></div>
+          </div>
+          <div class="item-menu">
+            <span>RedMi红米</span>
+            <div class="children"></div>
+          </div>
+          <div class="item-menu">
+            <span>电视</span>
+            <div class="children"></div>
+          </div>
+        </div>
+        <div class="search-header"></div>
+      </div>
     </div>
     </div>
   
@@ -29,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import "../assets/scss/base.scss";
     .header{
 
       .nav-topbar{
@@ -38,10 +57,7 @@ export default {
         background-color:#333333;
         color: #b0b0b0;
       }
-      .container{
-        width: 1226px;
-        margin-right: auto;
-        margin-left: auto;
+      .container{ 
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -64,6 +80,52 @@ export default {
             margin-right: 4px;
           }
         }
+      }
+      .nav-header{
+        margin-top:20px;
+        .container{
+          height: 112px;
+          display: flex;
+          justify-content:space-between ;
+          align-items: center;
+          .header-logo{
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            background-color:#FF6600;
+            a{
+              display:inline-block;
+              width: 110px;
+              height: 55px;
+              &:before{
+                content: '';
+                display: inline-block;
+                width: 55px;
+                height: 55px;
+                background:url('../../public/imgs/mi-logo.png') no-repeat center;
+                background-size: 55px;
+                 transition: margin .2s ;
+              }
+              &:after{
+                content: '';
+                display: inline-block;
+                width: 55px;
+                height: 55px;
+                background:url('../../public/imgs/mi-home.png') no-repeat center;
+                background-size: 55px;
+              }
+              &:hover:before{
+                margin-left: -55px;
+                transition: margin .2s ;
+              }
+            }
+          }
+          .header-menu{
+            display: inline-block;
+            padding-left:209px;
+          }
+        }
+
       }
     }
 </style>
