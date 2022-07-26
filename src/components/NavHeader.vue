@@ -23,7 +23,17 @@
         <div class="header-menu">
           <div class="item-menu">
             <span>小米手机</span>
-            <div class="children"></div>
+            <div class="children">
+              <ul>
+                <li class="product">
+                  <a href="" target="_blank">
+                    <div class="pro-img"></div>
+                    <div class="pro-name"></div>
+                    <div class="pro-price"></div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="item-menu">
             <span>RedMi红米</span>
@@ -89,6 +99,7 @@ export default {
       .nav-header{
         margin-top:20px;
         .container{
+          position: relative;
           height: 112px;
           display: flex;
           justify-content:space-between ;
@@ -132,7 +143,23 @@ export default {
                   cursor: pointer;
                 }
                 &:hover{
-
+                  color:#FF6600;
+                  .children{
+                    height: 220px;
+                  }
+                }
+                .children{
+                  position: absolute;
+                  top: 112px;
+                  left:0;
+                  width: 1226px;
+                  border-top:1px solid  #E5E5E5;
+                  box-shadow: 0px 7px 6px 0px rgba(0, 0,0, 0.11);
+                  .product{
+                    float: left;
+                    width: 16.66%;
+                    
+                  }
                 }
             }
           }
