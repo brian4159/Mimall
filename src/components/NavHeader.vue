@@ -65,6 +65,7 @@ export default {
 <style lang="scss">
 @import "../assets/scss/base.scss";
 @import "../assets/scss/mixin.scss";
+@import "../assets/scss/config.scss";
     .header{
 
       .nav-topbar{
@@ -146,6 +147,7 @@ export default {
                   color:#FF6600;
                   .children{
                     height: 220px;
+                    opacity: 1;
                   }
                 }
                 .children{
@@ -153,12 +155,48 @@ export default {
                   top: 112px;
                   left:0;
                   width: 1226px;
+                  height: 0;
+                  opacity: 0;
                   border-top:1px solid  #E5E5E5;
                   box-shadow: 0px 7px 6px 0px rgba(0, 0,0, 0.11);
                   .product{
                     float: left;
+                    position: relative;
                     width: 16.66%;
-                    
+                    height: 220px;
+                    font-size:12px;
+                    line-height:12px;
+                    &::before{
+                    content:"";
+                    position: absolute;
+                    top:28px;
+                    right:0;
+                    border-left:1px solid $colorF;
+                    height: 100px;
+                    width: 1px;
+                  }
+                    a{
+                      display: inline-block;
+                      
+                    }
+                    img{
+                      width: auto;
+                      height: 111px;
+                      margin-top: 26px;
+                    }
+                    .pro-img{
+                      height: 137px;
+
+                    }
+                    .pro-name{
+                      font-weight: bold;
+                      margin-top:19px;
+                      color:$colorB;
+                    }
+                    .pro-price{
+                      color:$colorA;
+                      text-align: center;
+                    }
                   }
                 }
             }
