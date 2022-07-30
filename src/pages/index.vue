@@ -44,7 +44,6 @@
           <swiper-slide v-for="(item,index) in slideList" v-bind:key="index">
             <a v-bind:href="'/#/product/'+item.id"><img v-bind:src="item.img"></a>
           </swiper-slide>
-          <!-- Optional controls -->
           <div class="swiper-pagination"  slot="pagination"></div>
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
@@ -52,12 +51,12 @@
       </div>
       <div class="ads-box">
         <a v-bind:href="'/#/product/'+item.id" v-for="(item,index) in adsList" v-bind:key="index">
-          <img v-lazy="item.img" alt="">
+          <img :src="item.img" >
         </a>
       </div>
       <div class="banner">
         <a href="/#/product/30">
-          <img v-lazy="'/imgs/banner-1.png'" alt="">
+          <img src="/imgs/banner-1.png" >
         </a>
       </div>
     </div>
@@ -104,7 +103,7 @@
 </template>
 <script>
   import ServiceBar from './../components/ServiceBar'
-  
+  // import Modal from './../components/Modal'
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import 'swiper/dist/css/swiper.css'
   export default{
@@ -113,7 +112,7 @@
       swiper,
       swiperSlide,
       ServiceBar,
-      
+      // Modal
     },
     data(){
       return {
@@ -322,6 +321,10 @@
     }
     .banner{
       margin-bottom:50px;
+      img{
+        width: 100%;
+        margin-top: 50px;
+      }
     }
     .product-box{
       background-color:$colorJ;
