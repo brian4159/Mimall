@@ -103,7 +103,7 @@
 </template>
 <script>
   import ServiceBar from './../components/ServiceBar'
-  // import Modal from './../components/Modal'
+  import Modal from './../components/Modal'
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import 'swiper/dist/css/swiper.css'
   export default{
@@ -112,7 +112,7 @@
       swiper,
       swiperSlide,
       ServiceBar,
-      // Modal
+      Modal
     },
     data(){
       return {
